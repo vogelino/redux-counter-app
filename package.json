@@ -1,0 +1,10 @@
+{
+  "name": "counter",
+  "version": "1.0.0",
+  "description": "Redux tutorial from egghead.io - Counter app",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Lucas Vogel <contact@vogelino.com> (http://vogelino.com)",
+  "license": "WTFPL"
+}
