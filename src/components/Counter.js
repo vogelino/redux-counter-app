@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 export default ({
 	value,
@@ -11,26 +12,20 @@ export default ({
 		<span className="counter-value">
 			{value}
 		</span>
-		<button
-			onClick={() => {
-				incrementHandler(index);
-			}}
-			className="counter-increment">
+		<Button
+			onClick={() => { incrementHandler(index); }}
+			componentClass="counter-increment">
 			+
-		</button>
-		<button
-			onClick={() => {
-				decrementHandler(index);
-			}}
-			className="counter-decrement">
+		</Button>
+		<Button
+			onClick={() => { decrementHandler(index); }}
+			componentClass="counter-decrement">
 			-
-		</button>
-		<button
-			onClick={() => {
-				removeCounterHandler(index);
-			}}
-			className="counters-remove">
+		</Button>
+		<Button
+			onClick={() => { removeCounterHandler(index); }}
+			componentClass="counters-remove">
 			Remove this counter
-		</button>
+		</Button>
 	</div>
 );

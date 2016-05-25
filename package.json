@@ -4,7 +4,8 @@
   "description": "Redux tutorial from egghead.io - Counter app",
   "main": "index.js",
   "scripts": {
-    "test": "babel-node test/**/*.js",
+    "start": "npm run watch",
+    "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js",
     "watch": "watchify ./src/index.js -t babelify -o ./dist/bundle.js"
   },
   "keywords": [],
@@ -16,6 +17,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.3.0",
     "expect": "^1.20.1",
+    "mocha": "^2.5.3",
     "watchify": "^3.7.0"
   },
   "dependencies": {
