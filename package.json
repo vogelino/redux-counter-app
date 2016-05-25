@@ -6,5 +6,11 @@
   "scripts": {},
   "keywords": [],
   "author": "Lucas Vogel <contact@vogelino.com> (http://vogelino.com)",
-  "license": "WTFPL"
+  "license": "WTFPL",
+  "devDependencies": {
+    "expect": "^1.20.1"
+  },
+  "dependencies": {
+    "babel-cli": "^6.9.0"
+  }
 }
