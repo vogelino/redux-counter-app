@@ -1,18 +1,27 @@
 import store from './store/store';
-import Counter from './components/Counter';
+import Counters from './components/Counters';
 import React from 'react';
 import { render } from 'react-dom';
 
 const renderApp = () => {
+	const state = store.getState();
 	const counterProps = {
-		value: store.getState(),
-		incrementHandler: () => {
-			store.dispatch({ type: 'INCREMENT' }); },
-		decrementHandler: () => {
-			store.dispatch({ type: 'DECREMENT' }); }
+		...state,
+		incrementHandler: function() {
+			store.dispatch({ type: 'INCREMENT_COUNTER', index: this.index });
+		},
+		decrementHandler: function() {
+			store.dispatch({ type: 'DECREMENT_COUNTER', index: this.index });
+		},
+		addCounterHandler: function() {
+			store.dispatch({ type: 'ADD_COUNTER' });
+		},
+		removeCounterHandler: function() {
+			store.dispatch({ type: 'REMOVE_COUNTER', index: this.index });
+		}
 	};
 	render(
-		<Counter {...counterProps} />,
+		<Counters {...counterProps} />,
 		document.getElementById('root')
 	);
 };
