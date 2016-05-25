@@ -1,4 +1,5 @@
 import counter from './counter'
+import * as actionTypes from '../actions/actionTypes';
 
 const addCounter = (list) => [ ...list, 0 ];
 
@@ -8,12 +9,12 @@ const removeCounter = (list, index) =>
 
 export default (state = [], action) => {
 	switch(action.type) {
-		case 'ADD_COUNTER':
+		case actionTypes.ADD_COUNTER:
 			return addCounter(state);
-		case 'REMOVE_COUNTER':
+		case actionTypes.REMOVE_COUNTER:
 			return removeCounter(state, action.index);
-		case 'INCREMENT_COUNTER':
-		case 'DECREMENT_COUNTER':
+		case actionTypes.INCREMENT_COUNTER:
+		case actionTypes.DECREMENT_COUNTER:
 			return [
 				...state.slice(0, action.index),
 				counter(state[action.index], action),
