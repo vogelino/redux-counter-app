@@ -1,7 +1,7 @@
 {
-  "name": "counter",
+  "name": "redux-counter-app",
   "version": "1.0.0",
-  "description": "Redux tutorial from egghead.io - Counter app",
+  "description": "Redux Counter app",
   "main": "index.js",
   "scripts": {
     "start": "npm run watch",
