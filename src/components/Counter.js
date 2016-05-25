@@ -12,17 +12,23 @@ export default ({
 			{value}
 		</span>
 		<button
-			onClick={incrementHandler.bind({ index })}
+			onClick={() => {
+				incrementHandler(index);
+			}}
 			className="counter-increment">
 			+
 		</button>
 		<button
-			onClick={decrementHandler.bind({ index })}
+			onClick={() => {
+				decrementHandler(index);
+			}}
 			className="counter-decrement">
 			-
 		</button>
 		<button
-			onClick={removeCounterHandler.bind({ index })}
+			onClick={() => {
+				removeCounterHandler(index);
+			}}
 			className="counters-remove">
 			Remove this counter
 		</button>
