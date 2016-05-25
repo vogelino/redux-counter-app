@@ -1,11 +1,13 @@
 import store from './store/store';
+import React from 'react';
+import { render } from 'react-dom';
 
-const render = () => {
-	document.body.innerText = store.getState();
+const renderApp = () => {
+	render(<span>{store.getState()}</span>, document.getElementById('root'))
 };
 
-store.subscribe(render);
-render();
+store.subscribe(renderApp);
+renderApp();
 
 document.addEventListener('click', () => {
 	store.dispatch( { type: 'INCREMENT' } );
